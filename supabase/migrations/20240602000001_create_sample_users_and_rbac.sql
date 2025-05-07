@@ -1,19 +1,19 @@
 -- Create sample users with different roles
 
 -- First, create the roles if they don't exist already
-INSERT INTO roles (name, description)
+INSERT INTO roles (name)
 VALUES 
-  ('admin', 'Administrator with full access'),
-  ('manager', 'Manager with team management access'),
-  ('team_member', 'Regular team member')
+  ('admin'),
+  ('manager'),
+  ('team_member')
 ON CONFLICT (name) DO NOTHING;
 
 -- Create sample teams
-INSERT INTO teams (name, description)
+INSERT INTO teams (name)
 VALUES 
-  ('Engineering', 'Engineering team'),
-  ('Operations', 'Operations team'),
-  ('Marketing', 'Marketing team')
+  ('Engineering'),
+  ('Operations'),
+  ('Marketing')
 ON CONFLICT (name) DO NOTHING;
 
 -- Create sample users
